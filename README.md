@@ -31,7 +31,7 @@ fs.inotify.max_user_watches = 582222
   $ cd /path/to/git/repo/project/
   $ npm install or yarn install
   $ npx react-native start
-  $ npx react-native android-studio
+  $ npx react-native run-android
   ```
   
 How to fix the permission denied android studios emulator error 
