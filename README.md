@@ -12,7 +12,7 @@ https://facebook.github.io/react-native/docs/getting-started
   - Android SDK
 - Watchman (recommended)
 
-These softwares take a considerable amount of time to download and configure
+These softwares take a considerable amount of time to download and configure.
 
 
 On Ubuntu I get error code "ENOSPC" when running npx react-native start. This can be fixed by opening a terminal and running:
@@ -22,13 +22,14 @@ fs.inotify.max_user_watches=582222
 fs.inotify.max_user_watches = 582222
 ``` 
 
-### To Start The Application
+### Start The Application
 - clone or download the code
 - Start an Android 9 emulator from android studios
-
-``` shell session
-$ cd /path/to/project
-$ npx react-native start
-$ npx react-native android-studio
-```
+- Open the terminal and run:
+  ``` shell session
+  $ cd /path/to/project
+  $ npx react-native start
+  $ npx react-native android-studio
+  ```
+The app should now appear on your emulator.
 
