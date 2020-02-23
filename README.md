@@ -29,6 +29,7 @@ fs.inotify.max_user_watches = 582222
 > make sure to cd into the project folder
   ``` shell session
   $ cd /path/to/git/repo/project/
+  $ npm install or yarn install
   $ npx react-native start
   $ npx react-native android-studio
   ```
