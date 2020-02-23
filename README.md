@@ -33,6 +33,9 @@ fs.inotify.max_user_watches = 582222
   $ npx react-native start
   $ npx react-native android-studio
   ```
+  
+How to fix the permission denied android studios emulator error 
+https://blog.chirathr.com/android/ubuntu/2018/08/13/fix-avd-error-ubuntu-18-04/
 
 The app should now appear on your emulator. Once the application is added to the emulator it should not need to be re-added for future use. However, to update the app you will need to be running the development server.
 
