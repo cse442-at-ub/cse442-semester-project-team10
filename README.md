@@ -34,5 +34,5 @@ fs.inotify.max_user_watches = 582222
   $ npx react-native android-studio
   ```
 
-The app should now appear on your emulator.
+The app should now appear on your emulator. Once the application is added to the emulator it should not need to be re-added for future use. However, to update the app you will need to be running the development server.
 
