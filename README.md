@@ -26,10 +26,12 @@ fs.inotify.max_user_watches = 582222
 - clone or download the code
 - Start an Android 9 emulator from android studios
 - Open the terminal and run:
+> make sure to cd into the project folder
   ``` shell session
-  $ cd /path/to/project
+  $ cd /path/to/git/repo/project/
   $ npx react-native start
   $ npx react-native android-studio
   ```
+
 The app should now appear on your emulator.
 
