@@ -32,7 +32,17 @@ fs.inotify.max_user_watches = 582222
   $ npm install or yarn install
   $ npx react-native run-android
   ```
-  
+
+If the following command does not load the application
+  ```
+  $ npx react-native run-android
+  ```
+Try
+  ```
+  $ npx react-native start
+  $ npx react-native run-android
+  ```
+
 How to fix the permission denied android studios emulator error 
 https://blog.chirathr.com/android/ubuntu/2018/08/13/fix-avd-error-ubuntu-18-04/
 
