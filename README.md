@@ -30,7 +30,6 @@ fs.inotify.max_user_watches = 582222
   ``` shell session
   $ cd /path/to/git/repo/project/
   $ npm install or yarn install
-  $ npx react-native start
   $ npx react-native run-android
   ```
   
