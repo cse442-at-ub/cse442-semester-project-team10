@@ -59,46 +59,48 @@ const styles = StyleSheet.create({
   },
   banner: {
     height: 50,
-    backgroundColor: 'white',
+    backgroundColor: '#0B0C10',
     justifyContent: 'space-around',
-    elevation: 5
+    elevation: 5,
   },
   bannerText: {
     fontSize: 25,
     alignSelf: 'center',
-    fontFamily: 'sans-serif-thick'
+    fontFamily: 'sans-serif-thick',
+    color: "#66FCF1"
   },
   body: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: 'gray'
+    backgroundColor: '#1F2833'
   },
   bestWords: {
-    height: 50,
-    alignSelf: 'center',
-    justifyContent: 'center'
+    height: 75,
+    width: '100%',
+    justifyContent: 'center',
   },
   board: {
     flex:1,
     borderColor: 'white',
-    backgroundColor: 'blue',
-    height: '70%', 
     width: '100%',
-    resizeMode: 'cover'
+    resizeMode: 'stretch',
+    // resizeMode: 'contain',
+    
   },
   myLetters: {
-    height: 50,
-    alignSelf: 'center',
+    height: 75,
     justifyContent: 'center'
   },
   navBar: {
-    height: 50,
-    backgroundColor: 'white',
-    alignSelf: 'center',
+    height: 60,
+    width: '100%',
+    backgroundColor: '#45A29E',
     justifyContent: 'center',
   },
   myText: {
-    fontSize: 15
+    alignSelf: 'center',
+    fontSize: 15,
+    color: "#66FCF1"
   },
 });
 
