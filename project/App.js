@@ -6,109 +6,99 @@
  * @flow
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
+  Image,
   Text,
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
+        <View style={styles.banner}>
+          <Text style={styles.bannerText}>
+            {'Words with Friends Cheater'}
+          </Text>
+        </View>
+
+        <View style={styles.body}>
+          <View style={styles.bestWords}>
+            <Text style={styles.myText}>
+              {'Best Words Stuff'}
+            </Text>
           </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+          <Image source={require('./images/IMG_2655.png')} style={styles.board}/>
+          <View style={styles.myLetters}>
+            <Text style={styles.myText}>
+              {'My Words Stuff'}
+            </Text>
+          </View>
+        </View>
+
+        <View style={styles.navBar}>
+          <Text style={styles.myText}>
+           {'Nav Bar Stuff'}
+          </Text>
+        </View>
+
+      </View>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  banner: {
+    height: 50,
+    backgroundColor: 'white',
+    justifyContent: 'space-around',
+    elevation: 5
+  },
+  bannerText: {
+    fontSize: 25,
+    alignSelf: 'center',
+    fontFamily: 'sans-serif-thick'
   },
   body: {
-    backgroundColor: Colors.white,
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: 'gray'
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  bestWords: {
+    height: 50,
+    alignSelf: 'center',
+    justifyContent: 'center'
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
+  board: {
+    flex:1,
+    borderColor: 'white',
+    backgroundColor: 'blue',
+    height: '70%', 
+    width: '100%',
+    resizeMode: 'cover'
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+  myLetters: {
+    height: 50,
+    alignSelf: 'center',
+    justifyContent: 'center'
   },
-  highlight: {
-    fontWeight: '700',
+  navBar: {
+    height: 50,
+    backgroundColor: 'white',
+    alignSelf: 'center',
+    justifyContent: 'center',
   },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  myText: {
+    fontSize: 15
   },
 });
 
-export default App;
