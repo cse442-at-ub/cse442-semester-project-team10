@@ -54,7 +54,7 @@ export default class App extends Component {
               onPress={() => Alert.alert('More button pressed')}
             />
             <Button
-              title='Hisory'
+              title='History'
               onPress={()=> Alert.alert('History button pressed')}
             />
             <Button
