@@ -29,9 +29,22 @@ fs.inotify.max_user_watches = 582222
 > make sure to cd into the project folder
   ``` shell session
   $ cd /path/to/git/repo/project/
-  $ npx react-native start
-  $ npx react-native android-studio
+  $ npm install or yarn install
+  $ npx react-native run-android
   ```
 
-The app should now appear on your emulator.
+If the following command does not load the application
+  ```
+  $ npx react-native run-android
+  ```
+Try
+  ```
+  $ npx react-native start
+  $ npx react-native run-android
+  ```
+
+How to fix the permission denied android studios emulator error 
+https://blog.chirathr.com/android/ubuntu/2018/08/13/fix-avd-error-ubuntu-18-04/
+
+The app should now appear on your emulator. Once the application is added to the emulator it should not need to be re-added for future use. However, to update the app you will need to be running the development server.
 
