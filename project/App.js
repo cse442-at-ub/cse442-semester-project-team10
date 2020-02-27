@@ -23,6 +23,7 @@ export default class App extends Component {
       <View style={styles.container}>
 
         <View style={styles.banner}>
+
           <Text style={styles.bannerText}>
             {'Words with Friends Cheater'}
           </Text>
@@ -62,22 +63,29 @@ const styles = StyleSheet.create({
     backgroundColor: '#0B0C10',
     justifyContent: 'space-around',
     elevation: 5,
+    backgroundColor: '#1F2833'
   },
   bannerText: {
     fontSize: 25,
     alignSelf: 'center',
     fontFamily: 'sans-serif-thick',
-    color: "#66FCF1"
+    color: "#66FCF1",
   },
   body: {
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#1F2833'
+
   },
   bestWords: {
     height: 75,
     width: '100%',
     justifyContent: 'center',
+    borderRadius: 10,
+    borderWidth: 5,
+    backgroundColor : '#45A29E'
+
+
   },
   board: {
     flex:1,
@@ -102,5 +110,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#66FCF1"
   },
+
 });
 
