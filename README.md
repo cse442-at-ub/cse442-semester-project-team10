@@ -25,8 +25,7 @@ fs.inotify.max_user_watches = 582222
 ### Start The Application
 - clone or download the code
 - Start an Android 9 emulator from android studios
-- Open the terminal and run:
-> make sure to cd into the project folder
+- Open the terminal and run in directory titled project:
   ``` shell session
   $ cd /path/to/git/repo/project/
   $ npm install or yarn install
@@ -46,5 +45,4 @@ Try
 How to fix the permission denied android studios emulator error 
 https://blog.chirathr.com/android/ubuntu/2018/08/13/fix-avd-error-ubuntu-18-04/
 
-The app should now appear on your emulator. Once the application is added to the emulator it should not need to be re-added for future use. However, to update the app you will need to be running the development server.
-
+The app should now appear on your emulator.
