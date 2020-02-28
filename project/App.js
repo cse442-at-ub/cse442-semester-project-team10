@@ -8,13 +8,14 @@
 
 import React, { Component } from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
+  Button,
   View,
+  SafeAreaView,
   Image,
   Text,
-  StatusBar,
+  Alert,
+  TouchableOpacity
 } from 'react-native';
 
 export default class App extends Component {
@@ -43,9 +44,24 @@ export default class App extends Component {
         </View>
 
         <View style={styles.navBar}>
-          <Text style={styles.myText}>
-           {'Nav Bar Stuff'}
-          </Text>
+          <View style={styles.fixToText}>
+            <Button
+              title='Go'
+              onPress={() => Alert.alert('Go button pressed')}
+            />
+            <Button
+              title='More'
+              onPress={() => Alert.alert('More button pressed')}
+            />
+            <Button
+              title='History'
+              onPress={()=> Alert.alert('History button pressed')}
+            />
+            <Button
+              title = 'Upload'
+              onPress={()=> Alert.alert('Upload button pressed')}
+              />
+          </View>
         </View>
 
       </View>
@@ -56,6 +72,14 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  title: {
+    textAlign: 'center',
+    marginVertical: 8,
+  },
+  fixToText: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
   },
   banner: {
     height: 50,
