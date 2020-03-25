@@ -7,6 +7,7 @@
  */
 
 import React, { Component } from 'react';
+import ImagePicker from "react-native-image-picker";
 import {
   StyleSheet,
   Button,
@@ -15,11 +16,26 @@ import {
   Image,
   Text,
   Alert,
+  KeyboardAvoidingView,
+  TextInput,
   TouchableOpacity
 } from 'react-native';
 
+
 export default class App extends Component {
+  state = {
+    photo: null,
+  }
+  handleChoosePhoto = () => {
+    const options = {noData: true,};
+    ImagePicker.launchImageLibrary(options, response=>{console.log("response", response);
+        if(response.uri){
+            this.setState({photo: response});
+        }
+    })
+  };
   render() {
+    const { photo } = this.state;
     return (
       <View style={styles.container}>
 
@@ -38,9 +54,10 @@ export default class App extends Component {
           </View>
           <Image source={require('./images/IMG_2655.png')} style={styles.board}/>
           <View style={styles.myLetters}>
-            <Text style={styles.myText}>
-              {'My Words Stuff'}
-            </Text>
+             <TextInput
+                placeholder = "Type your letters here"
+                style={styles.myText}
+             />
           </View>
         </View>
 
@@ -51,6 +68,7 @@ export default class App extends Component {
               title='Go'
               onPress={() => Alert.alert('Go button pressed')}
             />
+
             <Button
               color='#1F2833'
               title='More'
@@ -61,10 +79,11 @@ export default class App extends Component {
               title='History'
               onPress={()=> Alert.alert('History button pressed')}
             />
+
             <Button
               color='#1F2833'
               title = 'Upload'
-              onPress={()=> Alert.alert('Upload button pressed')}
+              onPress={this.handleChoosePhoto}
               />
           </View>
         </View>
