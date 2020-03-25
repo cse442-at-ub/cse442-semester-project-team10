@@ -4,10 +4,16 @@ import { NavigationContainer } from '@react-navigation/native';
 // import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
+
 import HomeScreen from '../pages/home/index'
 import InputScreen from '../pages/manuaInput/index'
 import UploadScreen from '../pages/upload/index'
 import SettingsScreen from '../pages/settings/index'
+
+
 
 
 // function SettingsScreen({ navigation }) {
@@ -49,7 +55,30 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+
+            if (route.name === 'Home') {
+              iconName = focused ? 'home'     : 'home-outline';
+            } else if (route.name === 'Input') {
+              iconName = focused ? 'card-text' : 'card-text-outline';
+            } else if (route.name === 'Upload') {
+                return <MaterialIcons name='insert-photo' size={size} color={color} />
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'settings' : 'settings-outline';
+            }
+
+            return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
+          },
+        })}
+        tabBarOptions={{
+          activeTintColor: 'tomato',
+          inactiveTintColor: 'gray',
+        }}
+        >
+
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Input" component={InputScreen} />
         <Tab.Screen name="Upload" component={UploadScreen} />
@@ -58,3 +87,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+
+
