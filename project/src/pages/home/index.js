@@ -73,15 +73,15 @@ const styles = StyleSheet.create({
 
   },
   bestWords: {
-    height: 75,
+    height:70,
     width: '100%',
     justifyContent: 'center',
-    borderRadius: 10,
-    borderWidth: 5,
-    backgroundColor : '#45A29E'
-
+    borderRadius: 50,
+    borderWidth: 10,
+    backgroundColor : '#EEE'
 
   },
+
   board: {
     flex:1,
     borderColor: 'white',
