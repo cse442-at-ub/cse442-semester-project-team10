@@ -36,31 +36,6 @@ export default class App extends Component {
           </View>
         </View>
 
-        <View style={styles.navBar}>
-          <View style={styles.fixToText}>
-            <Button
-              color='#1F2833'
-              title='Go'
-              onPress={() => Alert.alert('Go button pressed')}
-            />
-            <Button
-              color='#1F2833'
-              title='More'
-              onPress={() => Alert.alert('More button pressed')}
-            />
-            <Button
-              color='#1F2833' 
-              title='History'
-              onPress={()=> Alert.alert('History button pressed')}
-            />
-            <Button
-              color='#1F2833'
-              title = 'Upload'
-              onPress={()=> Alert.alert('Upload button pressed')}
-              />
-          </View>
-        </View>
-
       </View>
     )
   }

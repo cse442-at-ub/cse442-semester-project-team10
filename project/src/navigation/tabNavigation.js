@@ -6,9 +6,21 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../pages/home/index'
 import InputScreen from '../pages/manuaInput/index'
-import UploadScreen from '../pages/settings/index'
+import UploadScreen from '../pages/upload/index'
 import SettingsScreen from '../pages/settings/index'
 
+
+// function SettingsScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Settings screen</Text>
+//       <Button
+//         title="Go to Details"
+//         onPress={() => navigation.navigate('Details')}
+//       />
+//     </View>
+//   );
+// }
 
 // const HomeStack = createStackNavigator();
 
@@ -40,8 +52,8 @@ export default function App() {
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Input" component={InputScreen} />
-        {/* <Tab.Screen name="Upload" component={UploadScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} /> */}
+        <Tab.Screen name="Upload" component={UploadScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
