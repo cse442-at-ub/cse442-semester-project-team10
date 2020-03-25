@@ -1,4 +1,5 @@
 import dictionary from '../../data/dictionary.json'
+import letterValues from '../../data/letterValues.json'
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, FlatList, TouchableHighlight } from 'react-native';
 // import {
@@ -99,11 +100,7 @@ function SearchInput(placeholder) {
   );
 }
 
-const DATA = [
-                {word: 'Word Text', score: '12', key: '1'},
-                {word: 'Word Text2', score: '11', key: '2'},
-                
-              ];
+const DATA = BestWords('letter');
 // const searchIcon = (
 //   <MaterialIcons.Button 
 //       name="search" 
@@ -120,7 +117,43 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderWidth: 10,
     backgroundColor : '#EEE'
-
   },
-
 });
+
+function BestWords(letters) {
+  // letters = 'ther';
+  words = Object.keys(dictionary);
+  letters = letters.toLowerCase();
+  let dummyLetters = letters;
+  
+  let validWords = [];
+  for (index = 0; index < words.length; index++) {
+    let word = words[index];
+    let valid = true;
+    for (j = 0; j < word.length; j++) {
+      if (!dummyLetters.includes(word[j])) {
+        valid = false
+      }
+      dummyLetters.replace(word[j],"",1);
+      alert(dummyLetters)
+    }
+    if (valid) {
+      validWords.push(word);
+    }
+    dummyLetters = letters
+  }
+  alert(validWords)
+
+
+  let items = [];
+  for (index = 0; index < validWords.length; index++) { 
+    let scoreArray = validWords[index].split("").map(letter => letterValues[letter.toUpperCase()])
+    let score = scoreArray.reduce((accum, val) => (accum+val))
+    let item = {score: score, word: validWords[index], key: index.toString()};
+    items.push(item);
+  } 
+
+  return (
+    items.sort((a,b)=> b.score - a.score)
+  );
+}
