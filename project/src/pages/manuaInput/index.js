@@ -100,7 +100,7 @@ function SearchInput(placeholder) {
   );
 }
 
-const DATA = BestWords('letter');
+const DATA = BestWords('zquabce');
 // const searchIcon = (
 //   <MaterialIcons.Button 
 //       name="search" 
@@ -134,8 +134,8 @@ function BestWords(letters) {
       if (!dummyLetters.includes(word[j])) {
         valid = false
       }
-      dummyLetters.replace(word[j],"",1);
-      alert(dummyLetters)
+      dummyLetters = dummyLetters.replace(word[j],"",1);
+
     }
     if (valid) {
       validWords.push(word);
