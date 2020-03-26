@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Button,
   View,
-  SafeAreaView,
   Image,
   Text,
   Alert,
