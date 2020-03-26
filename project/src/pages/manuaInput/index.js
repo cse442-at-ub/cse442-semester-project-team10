@@ -1,128 +1,139 @@
 import dictionary from '../../data/dictionary.json'
 import letterValues from '../../data/letterValues.json'
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, FlatList, TouchableHighlight } from 'react-native';
-// import {
-//   StyleSheet,
-//   Button,
-//   View,
-//   SafeAreaView,
-//   Image,
-//   Text,
-//   Alert,
-//   TouchableOpacity
-// } from 'react-native';
+import { Text, View, StyleSheet, FlatList, TouchableHighlight, TextInput } from 'react-native';
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
+const bg_color = '#AAAAAA'
+const grey = '#CCCCCC'
+const white = '#FFFFFF'
+const black = '#000000'
+
+
 export default class bestWords extends Component {
+  state = { 
+    data: [] 
+  };
+  
   render() {
     return (
-      <View>
-        <View
-          style={{
-            backgroundColor: '#FFFFFF',
-            borderColor: '#000000',
-            borderWidth: 2,
-            height: 60,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-        }}>
-          <View
-          style={{
-            backgroundColor: '#FFFFFF',
-            borderColor: '#000000',
-            borderWidth: 2,
+      <View style={{ backgroundColor: bg_color, elevation:4, }} >
+        
+        <View style={ styles.searchBar }>
 
-
-          }}/>
-          <View
-          style={{
-            backgroundColor: '#FFFFFF',
-            borderColor: '#000000',
-            borderWidth: 2,
-            width: 60,
-          }}/>
+          <MaterialIcons name={'search'} size={40} color= {white} style= { styles.searchBarIcon } />
+          <SearchInput/>
+          
         </View>
-        <FlatList
-          ItemSeparatorComponent={
-            () => (<View style={{ borderBottomWidth: StyleSheet.hairlineWidt }}/>)
-          }
-          data={DATA}
-          // renderItem={({ item }) => <Text>{item.word}</Text>}
-          renderItem={({item}) => (
-            <TouchableHighlight>
-              <View style={{
-                backgroundColor: '#FFFFFF',
-                borderColor: '#000000',
-                borderWidth: 2,
-                flexDirection: 'row',
-                height: 60,
-                alignContent: 'space-between',
-                }}>
 
-                <View
-                  style={{
-                    backgroundColor: '#FFFFFF',
-                    borderColor: '#000000',
-                    borderWidth: 2,
-                    width: 60
-                  }}>
-                  <Text style={{fontSize: 35}}>{item.score}</Text>
-                </View>
-                <View
-                  style={{
-                    backgroundColor: '#FFFFFF',
-                    borderColor: '#000000',
-                    borderWidth: 2,
-                }}>
-                  <Text style={{fontSize: 35}}>{item.word}</Text>
-                </View>
-              </View>
-            </TouchableHighlight>
-          )}
+        <FlatList
+          ItemSeparatorComponent={ () => (<View style={ styles.lineSeparator }/>) }
+          data={ this.state.data } 
+          renderItem={({item}) => ( RenderItem(item))}
         />
       </View>
     );
   }
+
+
+  
+  
+
 };
 
-function SearchInput(placeholder) {
-  const [value, setValue] = React.useState("");
+ 
+function SearchInput() {
+  const [value, setValue] = React.useState("")
 
   return (
     <TextInput
-      style={styles.searchBar}
+      style={ styles.searchBarText}
       onChangeText={text => setValue(text)} //onFocus
+      onSubmitEditing={() => this.setState({data: BestWords(value)})}
+        
+        // this.setState({ data: BestWords(value)}).bind(bestWords)}
       value={value}
-      placeholder= {placeholder}
+      placeholder= { "Search" }
+      placeholderTextColor= {white}
     />
   );
-}
+};
 
-const DATA = BestWords('zquabce');
-// const searchIcon = (
-//   <MaterialIcons.Button 
-//       name="search" 
-//       backgroundColor="#111111" 
-//       onPress={this.loginWithFacebook}>
-//   </MaterialIcons.Button>
-// );
+function RenderItem(item) {
+  return (
+    <TouchableHighlight>
 
-const styles = StyleSheet.create({
+    <View style={ styles.item }>
+      <View
+        style={ styles.itemScore}>
+        <Text style={{fontSize: 35}}>{item.score}</Text>
+      </View>
+      <View
+        style={ styles.itemText }>
+        <Text style={{fontSize: 30}}>{item.word.toUpperCase()}</Text>
+      </View>
+    </View>
+
+  </TouchableHighlight>
+  )
+};
+
+
+
+
+styles = StyleSheet.create({
   searchBar: {
-    height:'100%',
+    height: 65,
     width: '100%',
-    justifyContent: 'center',
-    borderRadius: 50,
-    borderWidth: 10,
-    backgroundColor : '#EEE'
+    borderWidth: 5,
+    borderRadius: 25,
+    backgroundColor: grey,
+    borderColor: bg_color,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center' 
   },
+  searchBarText: {
+    fontSize: 27,
+    textAlignVertical: 'center',
+    color: black,
+    
+    
+  },
+  searchBarIcon: {
+    marginLeft: 7,
+    marginRight: 0,
+  },
+  item: {
+    backgroundColor: '#EFEFEF',
+    // borderColor: '#000000',
+    // borderWidth: 2,
+    flexDirection: 'row',
+    height: 60,
+    alignContent: 'space-between',
+    alignItems: 'center' 
+  },
+  itemText: {
+    // backgroundColor: '#FFFFFF',
+    // borderColor: '#000000',
+    // borderWidth: 2,
+  },
+  itemScore: {
+    // backgroundColor: '#FFFFFF',
+    // borderColor: '#000000',
+    // borderWidth: 2,
+    width: 60
+  },
+  lineSeparator: { 
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  }
+
 });
 
 function BestWords(letters) {
   // letters = 'ther';
-  words = Object.keys(dictionary);
+  let words = Object.keys(dictionary);
   letters = letters.toLowerCase();
   let dummyLetters = letters;
   
@@ -142,8 +153,6 @@ function BestWords(letters) {
     }
     dummyLetters = letters
   }
-  alert(validWords)
-
 
   let items = [];
   for (index = 0; index < validWords.length; index++) { 
@@ -156,4 +165,7 @@ function BestWords(letters) {
   return (
     items.sort((a,b)=> b.score - a.score)
   );
+  // orderedList = items.sort((a,b)=> b.score - a.score)
+  
+  
 }
