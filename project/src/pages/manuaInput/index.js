@@ -7,24 +7,19 @@ import SearchBar from '../../components/BestWords/SearchBar'
 
 import BestWords from '../../components/BestWords/SearchWord'
 
-export default function ManualInput() {
+export default function ManualInput({ navigation }) {
   const [words, setWords] = useState([
-    { score: 1, word: 'test1', key: '1' },
-    { score: 2, word: 'test2', key: '2' },
-    { score: 3, word: 'test3', key: '3' },
-    { score: 4, word: 'test4', key: '4' },
+    // { score: 1, word: 'test1', key: '1' },
+    // { score: 2, word: 'test2', key: '2' },
+    // { score: 3, word: 'test3', key: '3' },
+    // { score: 4, word: 'test4', key: '4' },
   ]);
 
   const submitHandler = (word) => {
     setWords((prevWords) => {
-      // alert(prevWords)
-      // worasdasdds = prevWords.concat({ score: 12, word: 'test', key: (words.length+1).toString()  })
-      return (
-          // prevWords
-          BestWords(word)
-          
-          
-        ) // prevTodos.push();
+     return (
+          BestWords(word) 
+        ) 
     });
   };
 
@@ -35,15 +30,13 @@ export default function ManualInput() {
         <SearchBar submitHandler={submitHandler}/>
       </View>
 
-        <FlatList
-          ItemSeparatorComponent={ () => (<View style={{ borderBottomWidth: StyleSheet.hairlineWidth }}/>) }
-          data={ words } 
-          renderItem={({item}) => 
-            ( <WordItem item={item} /> 
-          )}
-      />
-
-      
+      <FlatList
+        ItemSeparatorComponent={ () => (<View style={{ borderBottomWidth: StyleSheet.hairlineWidth }}/>) }
+        data={ words } 
+        renderItem={({item}) => 
+          ( <WordItem item={item} navigation={navigation} /> 
+        )}
+      />  
 
     </View>
   );
