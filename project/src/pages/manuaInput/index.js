@@ -7,12 +7,6 @@ import SearchBar from '../../components/BestWords/SearchBar'
 
 import BestWords from '../../components/BestWords/SearchWord'
 
-// const bg_color = '#AAAAAA'
-// const grey = '#CCCCCC'
-// const white = '#FFFFFF'
-// const black = '#000000'
-
-
 export default function ManualInput() {
   const [words, setWords] = useState([
     { score: 1, word: 'test1', key: '1' },
@@ -20,14 +14,6 @@ export default function ManualInput() {
     { score: 3, word: 'test3', key: '3' },
     { score: 4, word: 'test4', key: '4' },
   ]);
-
-  // const submitHandler = (text) => {
-  //   setWords(prevWords => {
-      
-  //     return words.push({ score: 12, word: 'test', key: (words.length+1).toString()  })
-
-  //   });
-  // }
 
   const submitHandler = (word) => {
     setWords((prevWords) => {
