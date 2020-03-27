@@ -11,7 +11,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import HomeScreen from '../pages/home/index'
 import InputScreen from '../pages/manuaInput/index'
 import UploadScreen from '../pages/upload/index'
-import SettingsScreen from '../pages/settings/index'
+import HistoryScreen from '../pages/history/index'
 
 
 
@@ -66,8 +66,8 @@ export default function App() {
               iconName = focused ? 'card-text' : 'card-text-outline';
             } else if (route.name === 'Upload') {
                 return <MaterialIcons name='insert-photo' size={size} color={color} />
-            } else if (route.name === 'Settings') {
-              iconName = focused ? 'settings' : 'settings-outline';
+            } else if (route.name === 'History') {
+              iconName = 'history'
             }
 
             return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
@@ -82,7 +82,7 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Input" component={InputScreen} />
         <Tab.Screen name="Upload" component={UploadScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="History" component={HistoryScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
