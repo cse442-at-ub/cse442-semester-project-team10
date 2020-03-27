@@ -43,10 +43,149 @@ export default class App extends Component {
               {'Best Words Stuff'}
             </Text>
           </View>
+          <View style={styles.board}>
           <Image source={require('../../images/IMG_2655.png')} style={styles.board}/>
+              <View style={styles.boardContainer}>
+              <TextInput style={styles.boardTextbox} />
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              <TextInput style={styles.boardTextbox}/>
+              
+              </View>
+              
+          </View>
+          
           <View style={styles.myLetters}>
              <TextInput
-                placeholder = "Type your letters here"
+                placeholder = "Type your letters here  "
+                placeholderTextColor="#B9B9B9"
                 style={styles.myText}
              />
           </View>
@@ -58,6 +197,28 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
+  boardTextbox:{
+    textTransform: 'uppercase',
+    //backgroundColor:'white',
+    width:34,
+    height:38,
+    borderRadius: 8,
+    marginRight:1.1,
+    marginBottom:3.5,
+    textAlign:'center',
+    fontSize:33,
+    color:'black',
+    padding:0,
+    fontWeight:'bold',
+    
+  },
+  boardContainer:{
+    flexDirection: 'row',
+    position: 'absolute',
+    marginTop: 8,
+    marginLeft:4,
+    flexWrap: 'wrap',
+  },
   container: {
     flex: 1
   },
@@ -81,6 +242,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontFamily: 'sans-serif-thick',
     color: "#66FCF1",
+    fontWeight:'bold',
   },
   body: {
     flex: 1,
@@ -94,7 +256,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 50,
     borderWidth: 10,
-    backgroundColor : '#EEE'
+    backgroundColor : 'white'
 
   },
 
@@ -103,12 +265,17 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     width: '100%',
     resizeMode: 'stretch',
+    //width: '100%', 
+    //height: 500,
+    
     // resizeMode: 'contain',
     
   },
   myLetters: {
     height: 75,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    position: 'relative',
+    width:'100%',
   },
   navBar: {
     height: 60,
@@ -118,8 +285,9 @@ const styles = StyleSheet.create({
   },
   myText: {
     alignSelf: 'center',
-    fontSize: 15,
-    color: "#66FCF1"
+    fontSize: 20,
+    color: "#66FCF1",
+    fontWeight: 'bold',
   },
 
 });
