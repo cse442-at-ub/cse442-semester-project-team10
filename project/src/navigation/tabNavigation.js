@@ -56,7 +56,7 @@ const InputStack = createStackNavigator()
 function InputStackScreen() {
   return(
     <InputStack.Navigator>
-      <InputStack.Screen name="Best Word" component={InputScreen}/>
+      <InputStack.Screen name="Manually Input Letters" component={InputScreen}/>
       <InputStack.Screen name="Definition" component={DefinitionScreen}/>
     </InputStack.Navigator>
   );

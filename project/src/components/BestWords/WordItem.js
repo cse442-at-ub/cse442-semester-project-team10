@@ -13,7 +13,7 @@ export default function RenderItem({ item, navigation }) {
             <Text style={{fontSize: 35}}>{item.score}</Text>
           </View>
           <View style={ styles.itemWord }>
-            <Text style={{fontSize: 30}}>{item.word}</Text>
+            <Text style={{fontSize: 30}}>{item.word.toUpperCase()}</Text>
           </View>
           
         </View>

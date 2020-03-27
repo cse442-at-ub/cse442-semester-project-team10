@@ -34,7 +34,7 @@ export default function SearchBar({ submitHandler }) {
 
 let styles = StyleSheet.create({  
   searchBar: {
-    borderRadius: 25,
+    borderRadius: 35,
     backgroundColor: '#AAA',
     flexDirection: 'row',
     justifyContent: 'flex-start',
