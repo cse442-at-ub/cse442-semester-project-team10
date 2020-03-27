@@ -17,7 +17,7 @@ export default function GalleryScreen() {
                 {photo: response}
               )
           });
-            this.setState({photo: response});
+            setPhotos({photo: response});
         }
     })
   };
