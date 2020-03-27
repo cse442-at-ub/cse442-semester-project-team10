@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ImagePicker from "react-native-image-picker";
 import {
   StyleSheet,
   Button,

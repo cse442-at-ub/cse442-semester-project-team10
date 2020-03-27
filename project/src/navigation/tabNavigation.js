@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { Button, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
-
 import HomeScreen from '../pages/home/index'
-import InputScreen from '../pages/manuaInput/index'
+import InputScreen     from '../pages/manuaInput/index'
+import DefinitionScreen from '../pages/manuaInput/definition'
 import UploadScreen from '../pages/upload/index'
 import HistoryScreen from '../pages/history/index'
+
 
 
 
@@ -50,6 +51,17 @@ import HistoryScreen from '../pages/history/index'
 //   );
 // }
 
+const InputStack = createStackNavigator()
+
+function InputStackScreen() {
+  return(
+    <InputStack.Navigator>
+      <InputStack.Screen name="Manually Input Letters" component={InputScreen}/>
+      <InputStack.Screen name="Definition" component={DefinitionScreen}/>
+    </InputStack.Navigator>
+  );
+}
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -80,7 +92,7 @@ export default function App() {
         >
 
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Input" component={InputScreen} />
+        <Tab.Screen name="Input" component={InputStackScreen} />
         <Tab.Screen name="Upload" component={UploadScreen} />
         <Tab.Screen name="History" component={HistoryScreen} />
       </Tab.Navigator>
