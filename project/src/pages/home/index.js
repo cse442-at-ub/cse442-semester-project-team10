@@ -9,7 +9,8 @@ import {
   Alert,
   KeyboardAvoidingView,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView
 } from 'react-native';
 
 
@@ -28,6 +29,9 @@ export default class App extends Component {
   render() {
     const { photo } = this.state;
     return (
+      <KeyboardAvoidingView
+      style={{flex:1}}>
+        <ScrollView>
       <View style={styles.container}>
 
         <View style={styles.banner}>
@@ -44,139 +48,139 @@ export default class App extends Component {
             </Text>
           </View>
           <View style={styles.board}>
-          <Image source={require('../../images/IMG_2655.png')} style={styles.board}/>
+          <Image source={require('../../images/board.jpg')} style={styles.board1}/>
               <View style={styles.boardContainer}>
-              <TextInput style={styles.boardTextbox} />
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
-              <TextInput style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               
               </View>
               
@@ -187,11 +191,14 @@ export default class App extends Component {
                 placeholder = "Type your letters here  "
                 placeholderTextColor="#B9B9B9"
                 style={styles.myText}
+                autoCapitalize='characters'
              />
           </View>
         </View>
 
       </View>
+      </ScrollView>
+      </KeyboardAvoidingView>
     )
   }
 }
@@ -263,12 +270,27 @@ const styles = StyleSheet.create({
   board: {
     flex:1,
     borderColor: 'white',
-    width: '100%',
-    resizeMode: 'stretch',
-    //width: '100%', 
-    //height: 500,
+    //width: '100%',
+    //resizeMode: 'stretch',
+    //borderColor:'red',
+    //borderWidth: 1,
+    width: 400, 
+    height: 465,
     
     // resizeMode: 'contain',
+  },
+  board1: {
+    flex:1,
+    //borderColor: 'white',
+    //width: '100%',
+    
+    width: 390, 
+    height: 470,    
+    // resizeMode: 'contain',
+    //width: '100%',
+    //height: '100%',
+    resizeMode: 'stretch',
+    //paddingRight:1,
     
   },
   myLetters: {
@@ -276,6 +298,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     position: 'relative',
     width:'100%',
+    fontSize:25,
   },
   navBar: {
     height: 60,
