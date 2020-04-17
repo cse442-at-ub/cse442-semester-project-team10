@@ -1,8 +1,13 @@
 import dictionary from '../../data/dictionary.json'
 import letterValues from '../../data/letterValues.json'
+import testWord from './WordPoints'
+import SpecialTiles from './SpecialTiles';
 
 export default function BestWords(letters) {
     // letters = 'ther';
+
+    testWord();
+    // SpecialTiles();
     let words = Object.keys(dictionary);
     letters = letters.toLowerCase();
     let dummyLetters = letters;
