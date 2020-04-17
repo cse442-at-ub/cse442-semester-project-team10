@@ -6,8 +6,7 @@ import SpecialTiles from './SpecialTiles';
 export default function BestWords(letters) {
     // letters = 'ther';
 
-    testWord();
-    // SpecialTiles();
+    // testWord();
     let words = Object.keys(dictionary);
     letters = letters.toLowerCase();
     let dummyLetters = letters;

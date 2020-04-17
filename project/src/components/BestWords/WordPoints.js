@@ -1,6 +1,6 @@
-import SpecialTiles from './SpecialTiles';
+// import SpecialTiles from './SpecialTiles';
 
-export default function WordPoints(){
+function WordPoints(){
     // Word which will be inputted
     console.log('Word to test:');
     let word = {

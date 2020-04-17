@@ -56,7 +56,7 @@ export default function SpecialTiles() {
     special_tiles[10][8]  = 'TW';
     special_tiles[10][10] = 'TL';
 
-    console.log(special_tiles);
+    // console.log(special_tiles);
     return (
         special_tiles
     );   
