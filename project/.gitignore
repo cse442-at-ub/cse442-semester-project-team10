@@ -24,8 +24,8 @@ DerivedData
 # Android/IntelliJ
 #
 build/
-.idea
-../.idea
+.idea/
+../.idea/
 .gradle
 local.properties
 *.iml
@@ -61,3 +61,4 @@ buck-out/
 
 #Checkpoints
 **/.ipynb_checkpoints/**
+workspace.xml
