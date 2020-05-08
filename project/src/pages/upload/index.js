@@ -43,7 +43,9 @@ export default function GalleryScreen() {
               title = 'Upload'
               onPress={() => handleChoosePhoto()}
               />
-
+      <Button
+            title = 'Screenshot'
+            />
 
     </View>
 
