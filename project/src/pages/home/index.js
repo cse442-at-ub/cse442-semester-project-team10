@@ -84,18 +84,6 @@ export default class App extends Component {
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
 
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
@@ -156,7 +144,7 @@ export default class App extends Component {
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              
+
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
@@ -180,11 +168,23 @@ export default class App extends Component {
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
               <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
-              
+
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+              <TextInput maxLength = {1} autoCapitalize='characters' style={styles.boardTextbox}/>
+
               </View>
-              
+
           </View>
-          
+
           <View style={styles.myLetters}>
              <TextInput
                 placeholder = "Type your letters here  "
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
     color:'black',
     padding:0,
     fontWeight:'bold',
-    
+
   },
   boardContainer:{
     flexDirection: 'row',
@@ -273,24 +273,24 @@ const styles = StyleSheet.create({
     //resizeMode: 'stretch',
     //borderColor:'red',
     //borderWidth: 1,
-    width: 400, 
+    width: 400,
     height: 465,
-    
+
     // resizeMode: 'contain',
   },
   board1: {
     flex:1,
     //borderColor: 'white',
     //width: '100%',
-    
-    width: 390, 
-    height: 470,    
+
+    width: 390,
+    height: 470,
     // resizeMode: 'contain',
     //width: '100%',
     //height: '100%',
     resizeMode: 'stretch',
     //paddingRight:1,
-    
+
   },
   myLetters: {
     height: 75,
@@ -313,4 +313,3 @@ const styles = StyleSheet.create({
   },
 
 });
-
